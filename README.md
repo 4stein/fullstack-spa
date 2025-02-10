@@ -104,6 +104,9 @@ yarn android
 
 5. Run on iOS:
 
+bash
+yarn ios
+
 ## Database Commands
 
 npm run db:migrate
