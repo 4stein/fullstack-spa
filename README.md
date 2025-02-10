@@ -51,16 +51,17 @@ DB_HOST=localhost
 
 DB_PORT=5432
 
-3. Create database:
+3. Start pgAdmin:
+   In project used postgresql so will be needed pgAdmin
+   https://www.pgadmin.org/download
+   install and start pgAdmin
 
-In project used postgresql so will be needed pgAdmin
-https://www.pgadmin.org/download
-install and start pgAdmin
+4. Create database:
 
 bash
 npm run db:create
 
-4. Run migrations:
+5. Run migrations:
 
 bash
 npx sequelize-cli migration:generate --name create-users-table
@@ -68,7 +69,13 @@ npx sequelize-cli migration:generate --name create-posts-table
 npx sequelize-cli migration:generate --name create-comments-table
 npx sequelize-cli db:migrate
 
-5. Start server:
+5. Create uploads folder:
+   Create uploads folder for save Images (User Avatars)
+
+bash
+mkdir uploads
+
+6. Start server:
 
 bash
 Development
