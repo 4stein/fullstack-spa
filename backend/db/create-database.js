@@ -1,7 +1,5 @@
-import { Sequelize } from 'sequelize';
-import dotenv from 'dotenv';
-
-dotenv.config();
+const Sequelize = require('sequelize');
+require('dotenv').config();
 
 const createDatabase = async () => {
   const adminSequelize = new Sequelize({
@@ -10,7 +8,7 @@ const createDatabase = async () => {
     port: parseInt(process.env.DB_PORT || '5432'),
     username: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
-    database: 'postgres', // Підключаємось до дефолтної бази postgres
+    database: 'postgres',
   });
 
   try {
@@ -18,7 +16,6 @@ const createDatabase = async () => {
 
     console.log(`Checking if database "${databaseName}" exists...`);
 
-    // Перевіряємо чи існує база даних
     const [results] = await adminSequelize.query(
       `SELECT 1 FROM pg_database WHERE datname = '${databaseName}'`
     );
@@ -38,11 +35,12 @@ const createDatabase = async () => {
   }
 };
 
-// Запускаємо якщо файл викликано напряму
 if (require.main === module) {
   createDatabase()
     .then(() => process.exit(0))
     .catch(() => process.exit(1));
 }
 
-export default createDatabase;
+module.exports = {
+  createDatabase,
+};
