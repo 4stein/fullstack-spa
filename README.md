@@ -100,7 +100,8 @@ yarn start
 4. Run on Android:
 
 bash
-yarn android
+press a on Metro terminal to start android
+
 if there will be some problems with start on android use
 npx react-native doctor
 press f to fix after start of this command
