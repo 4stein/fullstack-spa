@@ -88,6 +88,7 @@ yarn install
 
 bash
 cd ios
+bundle install
 pod install
 cd ..
 
