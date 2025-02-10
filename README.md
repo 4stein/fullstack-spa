@@ -38,11 +38,17 @@ npm install
 
 env
 PORT=3001
+
 JWT_SECRET=your_jwt_secret
+
 DB_USERNAME=your_username
+
 DB_PASSWORD=your_password
+
 DB_DATABASE=your_database
+
 DB_HOST=localhost
+
 DB_PORT=5432
 
 3. Create database:
