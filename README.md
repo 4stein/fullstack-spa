@@ -101,6 +101,9 @@ yarn start
 
 bash
 yarn android
+if there will be some problems with start on android use
+npx react-native doctor
+press f to fix after start of this command
 
 5. Run on iOS:
 
