@@ -13,10 +13,6 @@ yarn-error.log
 dist/
 build/
 
-# Uploads
-uploads/*
-!uploads/.gitkeep
-
 # Logs
 logs/
 *.log

@@ -109,7 +109,7 @@ press f to fix after start of this command
 5. Run on iOS:
 
 bash
-yarn ios
+press i on Metro terminal to start android
 
 ## Database Commands
 
