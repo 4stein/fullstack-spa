@@ -14,7 +14,7 @@ import {loginUser} from '../../../store/slices/authSlice/authSlice';
 import {useNavigation} from '@react-navigation/native';
 
 interface LoginData {
-  username: string;
+  email: string;
   password: string;
 }
 
@@ -28,7 +28,7 @@ const LoginForm = () => {
     formState: {errors},
   } = useForm<LoginData>({
     defaultValues: {
-      username: '',
+      email: '',
       password: '',
     },
   });
@@ -52,17 +52,15 @@ const LoginForm = () => {
         render={({field: {onChange, onBlur, value}}) => (
           <TextInput
             style={styles.input}
-            placeholder="Username"
+            placeholder="Email"
             onBlur={onBlur}
             onChangeText={onChange}
             value={value}
           />
         )}
-        name="username"
+        name="email"
       />
-      {errors.username && (
-        <Text style={styles.errorText}>This is required.</Text>
-      )}
+      {errors.email && <Text style={styles.errorText}>This is required.</Text>}
 
       <Controller
         control={control}
